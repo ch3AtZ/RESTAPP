@@ -114,7 +114,7 @@ app.get('/api/history', async (req, res) => {
 });
 (async () => {
   try {
-    c
+    
     orm = await MikroORM.init({
       ...mikroConfig,
       entities: [RequestHistorySchema],
