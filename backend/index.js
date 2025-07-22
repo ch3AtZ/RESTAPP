@@ -12,7 +12,7 @@ app.use(express.json());
 
 let orm;
 
-app.use(async (req, next) => {
+app.use(async (req, res , next) => {
   req.orm = orm;
   next();
 });
@@ -45,16 +45,17 @@ app.post('/api/request', async (req, res) => {
       timestamp: new Date(),
       responseTime: end - start,
       statusCode: response.status,
+      responseBody: response.data,
     });
 
-    console.log('📝 Record created:', {
+/*     console.log('📝 Record created:', {
       method: record.method,
       url: record.url,
       timestamp: record.timestamp,
       responseTime: record.responseTime,
       statusCode: record.statusCode
     });
-
+ */
     await em.persistAndFlush(record);
     
 

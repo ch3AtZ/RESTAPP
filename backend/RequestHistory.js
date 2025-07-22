@@ -10,6 +10,7 @@ const RequestHistorySchema = new EntitySchema({
     timestamp: { type: 'Date' },
     responseTime: { type: 'number' },
     statusCode: { type: 'number' },
+    responseBody: { type: 'json', nullable: true },
   },
 });
 
