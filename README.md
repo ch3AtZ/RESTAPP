@@ -13,3 +13,4 @@ MikroORM will interact with this sqlite database automatically
 
 The frontend has options to enter url and chose the 4 api methods -> POST GET DELETE PUT
 Response of the entered url is shown and below is the request history. 
+It uses pagination to show the db history , 
