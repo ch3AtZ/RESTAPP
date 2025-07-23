@@ -17,7 +17,10 @@ const RequestForm = ({ onRequestSent }) => {
       
       onRequestSent();
     } catch (error) {
-      alert(` ${error.response?.data?.error || error.message}`);
+      /* alert(` ${error.response?.data?.error || error.message}`); */
+    }
+    finally {
+        onRequestSent(); 
     }
   };
 
